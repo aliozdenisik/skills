@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements"
+  short_description: "Write requirements using NASA’s checklist"
+  default_prompt: "Use $requirements to write requirements for my request following the NASA checklist."
