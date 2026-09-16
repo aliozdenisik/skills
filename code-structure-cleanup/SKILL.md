@@ -21,10 +21,9 @@ Run this pass after the feature works. Reduce duplication and make the feature e
 
 ## Completion Criteria
 
-- Repeated mechanics in the feature area are reduced rather than merely reformatted or moved.
-- Domain decisions remain visible in the calling route, action, or component.
-- Callers are simpler and use one consistent implementation of the shared mechanism.
-- Observable behavior and public contracts remain unchanged.
-- The diff stays focused on the completed feature and the relevant verification passes.
+- Each duplicated mechanism selected for cleanup has one implementation, and every affected caller uses it.
+- Public APIs, returned data, persisted data, external side effects, and business rules have no intentional changes.
+- Relevant tests, type checks, and linters pass; any check that could not run is named with the reason.
+- The final diff contains only files and edits required for this cleanup.
 
 If no meaningful duplication or structural problem is present, report that result instead of manufacturing an abstraction.
