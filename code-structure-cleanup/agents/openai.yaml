@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Structure Cleanup"
+  short_description: "Clean up feature code without changing behavior"
+  default_prompt: "Use $code-structure-cleanup to refactor this working feature into a cleaner, focused structure without changing behavior."
