@@ -19,11 +19,13 @@ Run this pass after the feature works. Reduce duplication and make the feature e
 5. Run the relevant tests, type checks, and linters available for the affected area. Review the diff for accidental behavior changes.
 6. Summarize what duplication was removed, where the shared mechanism now lives, and which checks passed or could not run.
 
-## Completion Criteria
+## Acceptance Criteria
 
-- Each duplicated mechanism selected for cleanup has one implementation, and every affected caller uses it.
-- Public APIs, returned data, persisted data, external side effects, and business rules have no intentional changes.
-- Relevant tests, type checks, and linters pass; any check that could not run is named with the reason.
-- The final diff contains only files and edits required for this cleanup.
-
-If no meaningful duplication or structural problem is present, report that result instead of manufacturing an abstraction.
+- **AC-1:** The cleaned feature shall preserve its public APIs, returned data, persisted data, external side effects, and business rules.
+- **AC-2:** Each duplicated mechanism selected for cleanup shall have one canonical implementation used by every affected caller.
+- **AC-3:** Each feature-specific business decision shall remain in its calling route, action, or component.
+- **AC-4:** Every existing test, type check, and linter that covers a modified file shall pass.
+- **AC-5:** The completion report shall list each unexecuted check with its reason.
+- **AC-6:** The final diff shall contain only edits required to remove the identified duplication and verify the result.
+- **AC-7:** The cleanup pass shall leave code unchanged when analysis finds no qualifying duplication.
+- **AC-8:** The completion report shall state when analysis finds no qualifying duplication.
