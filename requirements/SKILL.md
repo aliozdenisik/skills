@@ -7,6 +7,15 @@ description: Write requirements for the user's request using NASA's How to Write
 
 Write requirements for what the user requests, following the NASA checklist below.
 
+## Output contract for completion verification
+
+- Create or update the project's `requirements.md` as the sole authoritative requirements source. Keep the scope limited to the user's request.
+- Give each mandatory requirement a unique, stable ID. Preserve existing IDs; otherwise use `REQ-001`, `REQ-002`, etc. Never renumber existing requirements or reuse retired IDs. Place exactly one standalone `<!-- requirement: REQ-001 -->` marker immediately before its declaration, substituting its actual ID. Mark mandatory declarations only, not goals, examples, or cross-references.
+- Preserve the project's existing acceptance-criteria structure. Keep observable success conditions, thresholds, and exceptions attached to their requirement; add concise criteria only where needed for verification. Independently declared mandatory requirements need their own IDs; nested acceptance criteria remain with their parent.
+- Distinguish mandatory obligations (`shall`/`must`) from goals (`should`) and declarations (`will`). Make unresolved assumptions or TBD/TBR values explicit rather than inventing acceptance conditions.
+- For solo development, apply only relevant product checks from the NASA reference. Do not introduce team roles, approval chains, review boards, facility fields, or responsible-organization metadata.
+- This skill authors requirements. Leave implementation evidence, verification methods, audit statuses, and the final completion decision to `requirement-verification` after implementation; no additional planning pipeline is required.
+
 Source: [NASA — Appendix C: How to Write a Good Requirement](https://www.nasa.gov/reference/appendix-c-how-to-write-a-good-requirement/).
 The complete checklist text is reproduced verbatim below; only formatting is adapted to Markdown.
 
