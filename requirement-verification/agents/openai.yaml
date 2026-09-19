@@ -1,0 +1,3 @@
+interface:
+  display_name: "Requirement Verification"
+  short_description: "Gate completion on requirement coverage and evidence"
