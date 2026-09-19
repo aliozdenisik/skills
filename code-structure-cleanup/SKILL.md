@@ -29,3 +29,7 @@ Run this pass after the feature works. Reduce duplication and make the feature e
 - **AC-6:** The final diff shall contain only edits required to remove the identified duplication and verify the result.
 - **AC-7:** The cleanup pass shall leave code unchanged when analysis finds no qualifying duplication.
 - **AC-8:** The completion report shall state when analysis finds no qualifying duplication.
+
+## Requirement implementation handoff
+
+When this pass is entered from `implement-requirements`, automatically read and run `requirement-verification` after cleanup and its checks, including when no qualifying duplication exists. Return its audit to the implementation coordinator: unresolved gaps resume targeted implementation, then cleanup and verification repeat. Cleanup success alone does not complete the implementation task. Standalone cleanup requests retain their original scope.
